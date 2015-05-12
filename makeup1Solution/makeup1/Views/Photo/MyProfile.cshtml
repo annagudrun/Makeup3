@@ -1,0 +1,37 @@
+﻿@model makeup1.ViewModels.UsersAccount
+
+<div class="col-lg-12">
+    @if (Model.username != null)
+    {
+        <div class="col-lg-3 pull-left">
+            <div style="display:none;" id="followUsername">@Model.username</div>
+            @if (Model.isFollowing)
+            {
+                <a onclick="UnFollowUser()" class="unFollowText">Unfollow</a>
+                <a onclick="FollowUser()" class="followText" style="display:none;">Follow</a>
+            }
+            else
+            {
+                <a onclick="FollowUser()" class="followText">Follow</a>
+                <a onclick="UnFollowUser()" class="unFollowText" style="display:none;">Unfollow</a>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="uploadContainer">
+            <input placeholder="Slóð á mynd" class="input-sm" id="imageUrl"/>
+            <input placeholder="Titill" class="input-sm" id="imageCaption" />
+            <input placeholder="Hash tags" class="input-sm" id="imageHash"/>   
+            <input type="button" class="btn btn-primary" value="Upload" onclick="UploadImage()"/>
+        </div>
+        
+    }
+</div>
+
+<div>
+    @foreach (var photo in Model.photos)
+    {   
+        <img src="@photo.photoUrl"/>
+    }
+</div>
