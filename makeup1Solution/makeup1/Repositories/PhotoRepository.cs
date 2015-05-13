@@ -11,21 +11,6 @@ namespace makeup1.Repositories
     {
         ApplicationDbContext db = new ApplicationDbContext();
 
-        public IEnumerable<Photo> GetAllPhotos
-        {
-            get { return db.Photos; }
-            set { }
-        }
-
-        public bool Add(Photo photo)
-        {
-            db.Photos.Add(photo);
-
-            db.SaveChanges();  
-
-            return true;
-        }
-
         //ná í mynd út frá flokk
         public List<Photo> GetPhotoByCategorie(string categorie)
         {
@@ -36,7 +21,7 @@ namespace makeup1.Repositories
         {
             return db.Photos.Where(a => a.UserId == userId).ToList();
         }
-        //her getum vid verid med delete ef vid viljum
+
 
         public bool FollowUser(string user, string username)
         {
@@ -56,7 +41,7 @@ namespace makeup1.Repositories
             }
         }
 
-        internal bool UnFollowUser(string user, string username)
+        public bool UnFollowUser(string user, string username)
         {
             try
             {
@@ -72,7 +57,7 @@ namespace makeup1.Repositories
         }
 
 
-        internal List<Photo> GetFollowersPhotos(string username)
+        public List<Photo> GetFollowersPhotos(string username)
         {
             List<string> followingUser = db.Followers.Where(a => a.FollowerName == username).Select(b => b.FollowerUserId).ToList();
 
@@ -81,7 +66,7 @@ namespace makeup1.Repositories
             return db.Photos.Where(a => userIds.Contains(a.UserId)).ToList();
         }
 
-        internal bool AddPhoto(UploadModel model)
+        public bool AddPhoto(UploadModel model)
         {
             try
             {

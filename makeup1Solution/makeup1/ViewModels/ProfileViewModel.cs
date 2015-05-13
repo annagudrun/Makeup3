@@ -17,7 +17,7 @@ namespace makeup1.ViewModels
         public UserViewModel(ApplicationUser user)
         {
             username = user.UserName;
-            profilePhoto = user.PasswordHash;
+            profilePhoto = user.ProfilePic;
         }
     }
 }
