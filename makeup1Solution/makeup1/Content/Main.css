@@ -173,3 +173,10 @@ visibility:visible;
     background-color: grey; 
 }
 
+.textCaption
+{
+    font-size: x-large;
+    font-style: oblique;
+    margin-bottom: 0px;
+}
+
