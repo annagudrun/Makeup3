@@ -9,7 +9,6 @@ namespace makeup1.Models
 {
     public class Photo
     {
-
         public int ID { get; set; }
         public string photoUrl { get; set; }
         public string UserId { get; set; }
