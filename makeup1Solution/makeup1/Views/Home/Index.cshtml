@@ -16,14 +16,15 @@
          </div>
         
         <div class="displaytext">
-            <p class="text">@p.Caption</p>
+            <p class="textCaption">@p.Caption</p>
             @foreach(var h in p.Hashtags)
             {
-                <span>#@h.HastagName</span>
-            }
-            @*<div style="display:block; background: url(@p); background-size: cover; background-repeat no-repeat; background-position 50% 50%; max-width 100%; height 200px;" class="photo-wrapper"></div>*@
+                <span>#@h.HastagName</span>               
+            }          
         </div>
-
        </div>
+       <br />
+       <br />
     }
+
 </div>

@@ -173,8 +173,9 @@ visibility:visible;
     background-color: grey; 
 }
 
-.follow
+.textCaption
 {
-    display: block;
-    width: 100%;
+    font-size: x-large;
+    font-style: oblique;
+    margin-bottom: 0px;
 }
