@@ -1,16 +1,13 @@
 ﻿@model makeup1.ViewModels.CategorieViewModel
+
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
-<div>
-    @foreach (var photo in Model.catePhotos)
-    {
-        <div class="categorie">
-            <img src="@photo.photoUrl" />
-            <p>@photo.Caption</p>
-        </div>
-    }
+<div class="categories">
+    @Html.ActionLink("Kvöldförðun", "EveningMakeup", new {  })</br>
+    @Html.ActionLink("Dagsförðun", "DayMakeup", new { })</br>
+    @Html.ActionLink("Snyrtivörur", "MakeupProduct", new { })</br>
 </div>
