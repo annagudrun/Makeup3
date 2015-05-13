@@ -41,7 +41,8 @@
                     <li>@Html.ActionLink("Mín síða", "MyProfile", "Photo")</li>
                     <li>@Html.ActionLink("Tilboð", "Offer", "Home")</li>
                     <li>@Html.ActionLink("Förðunarfræðingar", "Artist", "Home")</li>
-                    <li>@Html.ActionLink("Myndaflokkar", "Categories", "Photo")
+                    <li>@Html.ActionLink("Myndaflokkar", "Categories", "Photo")</li>
+                    <li>@Html.ActionLink("Breyta prófíl", "EditProfile", "Home")</li>
                 }
             </ul>
 
@@ -56,13 +57,9 @@
     </div>
     <div class="container body-content">
         <div id="searchResults">
-
-        </div>
+</div>
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+
     </div>
 
     @Scripts.Render("~/bundles/jquery")

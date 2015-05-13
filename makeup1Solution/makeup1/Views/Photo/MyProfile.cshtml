@@ -19,19 +19,29 @@
     }
     else
     {
-        <div class="uploadContainer">
-            <input placeholder="Slóð á mynd" class="input-sm" id="imageUrl"/>
-            <input placeholder="Titill" class="input-sm" id="imageCaption" />
-            <input placeholder="Hash tags" class="input-sm" id="imageHash"/>   
-            <input type="button" class="btn btn-primary" value="Upload" onclick="UploadImage()"/>
-        </div>
+        <div class="profile-about">
+            <div class="fulltnafn">
+                <p class="letters">Fullt Nafn Viðkomandi</p>
+            </div>
+        <div class="about-me">
+            <img src="http://www.genengnews.com/app_themes/genconnect/images/default_profile.jpg" />
+        </div> 
         
+            <div class="uploadContainer text-center">
+                <input placeholder="Slóð á mynd" class="input-sm" id="imageUrl"/>
+                <input placeholder="Titill" class="input-sm" id="imageCaption" />
+                <input placeholder="Hash tags" class="input-sm" id="imageHash"/>   
+                <input class="button-col" type="submit" class="btn btn-primary" value="Upload" onclick="UploadImage()"/>
+            </div>
+            </div>
     }
 </div>
 
 <div>
     @foreach (var photo in Model.photos)
-    {   
+    {  
+        <div class="minsida">
         <img src="@photo.photoUrl"/>
+        </div>
     }
 </div>

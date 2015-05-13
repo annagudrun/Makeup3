@@ -88,13 +88,13 @@ namespace makeup1.Controllers
         }
 
         [HttpPost]
-        public JsonResult Upload(UploadModel model)
+        public ActionResult Upload(UploadModel model)
         {
             PhotoRepository repo = new PhotoRepository();
             model.userid = User.Identity.GetUserId();
             bool resp = repo.AddPhoto(model);
 
-            return Json(resp, JsonRequestBehavior.AllowGet);
+            return RedirectToAction("MyProfile", "Photo");
         }
 
         [HttpPost]
@@ -106,7 +106,7 @@ namespace makeup1.Controllers
             photoRepository.Add(p);
            // var model = photoRepository.Add(new Photo(photoUrl,comment,userId));
 
-            return RedirectToAction("MyProfile", "Home");
+            return RedirectToAction("MyProfile", "Photo");
         } 
 
 

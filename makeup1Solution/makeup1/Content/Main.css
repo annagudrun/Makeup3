@@ -128,3 +128,58 @@ visibility:hidden;
 #col-md-4:hover .text {
 visibility:visible;
 }
+
+
+.minsida 
+{
+    width: 100%;
+    display: block;
+    height: auto;
+    margin-left: 10%;
+}
+.minsida > img
+{
+    float:left;
+    width: 300px;
+    height: 300px;
+    margin: 5px 5px;
+}
+.foot
+{
+    display: block;
+    width: 100%;
+}
+#camera {
+    border: none;
+    padding: 0px;
+    margin-top: 20px;
+}
+
+.profile-about
+{
+    width: 100%;
+    margin: 30px; 
+}
+
+.about-me
+{
+    width: 100%;
+    display: block;
+
+}
+
+.button-col
+{
+    background-color: grey; 
+}
+
+.fulltnafn
+{
+    padding: 20px; 
+}
+
+.letters
+{
+    font-size:8;  
+    color:darkgrey; 
+}

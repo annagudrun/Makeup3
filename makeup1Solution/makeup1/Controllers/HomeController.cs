@@ -22,6 +22,12 @@ namespace makeup1.Controllers
             return View(model);
         }
 
+        public ActionResult EditProfile()
+        {
+
+            return View();
+        }
+
         public ActionResult Hallo()
         {
             return View();

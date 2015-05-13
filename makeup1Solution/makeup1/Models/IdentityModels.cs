@@ -6,7 +6,26 @@ namespace makeup1.Models
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
-        public string ProfilePhoto { get; set; }
+        public string FullName { get; set; }
+        private string ProfilePic { get; set; }
+        public string ProfilePhoto
+        {
+            get
+            {
+                return ProfilePic;
+            }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    ProfilePic = "http://i12.photobucket.com/albums/a229/heiddisskoli/default_profile_zpstffrjvqb.jpg";
+                }
+                else
+                {
+                    ProfilePic = value;
+                }
+            }
+        }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
