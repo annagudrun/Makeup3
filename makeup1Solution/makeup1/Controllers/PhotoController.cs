@@ -34,6 +34,8 @@ namespace makeup1.Controllers
 
             UsersAccount model = new UsersAccount();
             model.photos = rep.GetUsersPhotos(userId);
+            model.user = rep.GetUserByID(User.Identity.GetUserId());
+
 
             return View(model);
         }

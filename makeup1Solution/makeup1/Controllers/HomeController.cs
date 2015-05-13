@@ -57,6 +57,16 @@ namespace makeup1.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult EditProfile(FormCollection collection)
+        {
+            string userID = User.Identity.GetUserId();
+            string profilePicture = collection["profilePicture"];
+
+            UserRepository.Instance.editPicture(userID, profilePicture);
+
+            return RedirectToAction("Index");
+        }
        
     }
 }

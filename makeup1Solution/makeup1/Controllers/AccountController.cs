@@ -78,7 +78,7 @@ namespace makeup1.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser() { UserName = model.UserName };
+                var user = new ApplicationUser() { UserName = model.UserName, ProfilePhoto = string.Empty };
                 var result = await UserManager.CreateAsync(user, model.Password);
 
                 if (result.Succeeded)

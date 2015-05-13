@@ -9,6 +9,7 @@ namespace makeup1.ViewModels
 {
      public class UsersAccount
     {
+        public ApplicationUser user { get; set; }
         public List<Photo> photos { get; set; }
         public string username { get; set; }
         public bool isFollowing { get; set; }

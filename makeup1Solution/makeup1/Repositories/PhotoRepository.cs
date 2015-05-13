@@ -56,6 +56,14 @@ namespace makeup1.Repositories
             }
         }
 
+        public ApplicationUser GetUserByID(string userID)
+        {
+            ApplicationUser user = (from s in db.Users
+                                    where s.Id == userID
+                                    select s).SingleOrDefault();
+            return user;
+        }
+
 
         public List<Photo> GetFollowersPhotos(string username)
         {

@@ -10,6 +10,19 @@ namespace makeup1.Repositories
     public class UserRepository
     {
         private readonly ApplicationDbContext db = new ApplicationDbContext();
+        private static UserRepository instance;
+
+        public static UserRepository Instance
+        {
+            get
+            {
+                if(instance == null)
+                {
+                    instance = new UserRepository();
+                }
+                return instance;
+            }
+        }
 
         public List<ApplicationUser> GetAllUsers()
         {
@@ -32,6 +45,22 @@ namespace makeup1.Repositories
         internal bool IsFollowing(string user, string username)
         {
             return db.Followers.FirstOrDefault(a => a.FollowerName == user && a.FollowerUserId == username) != null;
+        }
+
+        public void editPicture(string userID, string profilePicture)
+        {
+            using (var db = new ApplicationDbContext())
+            {
+                var edit = (from s in db.Users
+                            where s.Id == userID
+                            select s).SingleOrDefault();
+
+                if(!String.IsNullOrEmpty(profilePicture))
+                {
+                    edit.ProfilePic = profilePicture;
+                }
+                db.SaveChanges();
+            }
         }
     }
 }
