@@ -25,6 +25,11 @@ namespace makeup1.Controllers
            return RedirectToAction("CategorieList", new { categorie = "Snyrtivörur" });
        }
 
+       public ActionResult MakeupByMe()
+       {
+           return RedirectToAction("CategorieList", new { categorie = "Förðun eftir mig" });
+       }
+
         public ActionResult CategorieList(string categorie)
         {
             PhotoRepository photoRep = new PhotoRepository();
