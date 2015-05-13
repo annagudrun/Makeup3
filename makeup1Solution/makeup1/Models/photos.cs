@@ -15,6 +15,7 @@ namespace makeup1.Models
         public string UserId { get; set; }
         public string Caption { get; set; }
         public DateTime DateCreated { get; set; }
+        public string Categorie { get; set; }
         public virtual ICollection<Hashtag> Hashtags { get; set; }
       /*  [ForeignKey("HashtagPhotoId")]
         public List<Hashtag> hashTags { get; set; }*/

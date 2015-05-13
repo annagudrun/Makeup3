@@ -6,11 +6,6 @@ using System.Web;
 
 namespace makeup1.ViewModels
 {
-    public class ProfileViewModel
-    {
-        public List<PhotoViewModel> Photos { get; set; }
-    }
-
     public class UserViewModel
     {
         public string  username { get; set; }

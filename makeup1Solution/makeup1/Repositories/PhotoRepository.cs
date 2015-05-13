@@ -26,6 +26,11 @@ namespace makeup1.Repositories
             return true;
         }
 
+        //ná í mynd út frá flokk
+        public List<Photo> GetPhotoByCategorie(string categorie)
+        {
+            return db.Photos.Where(a => a.Categorie == categorie).ToList();
+        }
 
         public List<Photo> GetUsersPhotos(string userId)
         {
@@ -66,10 +71,6 @@ namespace makeup1.Repositories
             }
         }
 
-      /*  internal List <Hashtag> GetTagsForPhoto(int photoId)
-        {
-            return db.Hashtags.Where(a => a.HashtagPhotoId
-        }*/
 
         internal List<Photo> GetFollowersPhotos(string username)
         {
@@ -82,7 +83,6 @@ namespace makeup1.Repositories
 
         internal bool AddPhoto(UploadModel model)
         {
-            // hér væri ég til í að setja hashtagPhotoId = Photo_ID
             try
             {
                 List<string> hashTags = model.hash.Split(' ').ToList();
@@ -101,6 +101,7 @@ namespace makeup1.Repositories
                     Caption = model.caption,
                     DateCreated = DateTime.Now,
                     UserId = model.userid,
+                    Categorie = model.categorie,
                     Hashtags = tags
                 };
 

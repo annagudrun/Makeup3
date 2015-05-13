@@ -7,7 +7,6 @@ using makeup1.Models;
 using makeup1.Repositories;
 using Microsoft.AspNet.Identity;
 using makeup1.ViewModels;
-//using makeup1.ViewModels;
 
 namespace makeup1.Controllers
 {
@@ -44,6 +43,16 @@ namespace makeup1.Controllers
             model.photos = rep.GetUsersPhotos(userId);
             
            // Console.WriteLine(viewModel);
+            return View(model);
+        }
+        
+        //hér skila ég modeli er í vinnslu
+        public ActionResult Categories(string categorie)
+        {
+            PhotoRepository photoRep = new PhotoRepository();
+            CategorieViewModel model = new CategorieViewModel();
+            model.catePhotos = photoRep.GetPhotoByCategorie(categorie);
+
             return View(model);
         }
 
@@ -97,6 +106,7 @@ namespace makeup1.Controllers
             return RedirectToAction("MyProfile", "Photo");
         }
 
+/*
         [HttpPost]
         public ActionResult AddPhoto(string photoUrl, string caption)
         {
@@ -108,7 +118,7 @@ namespace makeup1.Controllers
 
             return RedirectToAction("MyProfile", "Photo");
         } 
-
+*/
 
         // GET: /Photo/
         /*
