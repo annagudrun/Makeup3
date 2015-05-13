@@ -173,3 +173,8 @@ visibility:visible;
     background-color: grey; 
 }
 
+.follow
+{
+    display: block;
+    width: 100%;
+}
