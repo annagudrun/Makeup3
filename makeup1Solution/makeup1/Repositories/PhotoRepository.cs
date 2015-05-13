@@ -11,7 +11,6 @@ namespace makeup1.Repositories
     {
         ApplicationDbContext db = new ApplicationDbContext();
 
-        //ná í mynd út frá flokk
         public List<Photo> GetPhotoByCategorie(string categorie)
         {
             return db.Photos.Where(a => a.Categorie == categorie).ToList();
