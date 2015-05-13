@@ -13,12 +13,12 @@ namespace makeup1.Repositories
 
         public List<Photo> GetPhotoByCategorie(string categorie)
         {
-            return db.Photos.Where(a => a.Categorie == categorie).ToList();
+            return db.Photos.Where(a => a.Categorie == categorie).OrderByDescending(a => a.DateCreated).ToList();
         }
 
         public List<Photo> GetUsersPhotos(string userId)
         {
-            return db.Photos.Where(a => a.UserId == userId).ToList();
+            return db.Photos.Where(a => a.UserId == userId).OrderByDescending(a => a.DateCreated).ToList();
         }
 
 
@@ -70,7 +70,7 @@ namespace makeup1.Repositories
 
             List<string> userIds = db.Users.Where(a => followingUser.Contains(a.UserName)).Select(b => b.Id).ToList();
 
-            return db.Photos.Where(a => userIds.Contains(a.UserId)).ToList();
+            return db.Photos.Where(a => userIds.Contains(a.UserId)).OrderByDescending(a => a.DateCreated).ToList();
         }
 
         public bool AddPhoto(UploadModel model)

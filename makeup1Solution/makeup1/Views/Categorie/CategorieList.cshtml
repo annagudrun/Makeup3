@@ -7,7 +7,9 @@
 <h2>CategorieList</h2>
 
 <div class="categories">
-    @* hér vil ég setja inn linka fyrir categoriur*@
-    <a href="/Categorie/index">Kvoldfordun</a>
+    @Html.ActionLink("Kvoldfordun", "Categorie", new { })
+    @Html.ActionLink("Dagfordun", "Categorie", new { })
+    @Html.ActionLink("Fardi", "Categorie", new { })
+
 </div>
 
