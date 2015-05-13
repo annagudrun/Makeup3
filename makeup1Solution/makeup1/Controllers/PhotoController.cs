@@ -38,16 +38,7 @@ namespace makeup1.Controllers
             return View(model);
         }
         
-        //hér skila ég modeli er í vinnslu
-        public ActionResult Categories(string categorie)
-        {
-            PhotoRepository photoRep = new PhotoRepository();
-            CategorieViewModel model = new CategorieViewModel();
-            model.catePhotos = photoRep.GetPhotoByCategorie(categorie);
-
-            return View(model);
-        }
-
+     
         public ActionResult FriendsProfile(string id)
         {
             UserRepository userRep = new UserRepository();

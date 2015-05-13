@@ -160,6 +160,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategorieController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PhotoController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
@@ -235,11 +236,11 @@
     <Content Include="Views\Home\Artist.cshtml" />
     <Content Include="Views\Photo\MyProfile.cshtml" />
     <Content Include="Views\Home\EditProfile.cshtml" />
-    <Content Include="Views\Photo\Categories.cshtml" />
+    <Content Include="Views\Categorie\Categories.cshtml" />
+    <Content Include="Views\Categorie\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\CategorieViewModel\" />
     <Folder Include="Views\Search\" />
     <Folder Include="Views\UserRepository\" />
   </ItemGroup>
