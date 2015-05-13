@@ -178,6 +178,7 @@
     <Compile Include="Repositories\PhotoRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CategorieViewModel.cs" />
     <Compile Include="ViewModels\NewsFeedViewModel.cs" />
     <Compile Include="ViewModels\PhotoViewModel.cs" />
     <Compile Include="ViewModels\ProfileViewModel.cs" />
@@ -233,10 +234,11 @@
     <Content Include="Views\Home\Offer.cshtml" />
     <Content Include="Views\Home\Artist.cshtml" />
     <Content Include="Views\Photo\MyProfile.cshtml" />
-    <Content Include="Views\Photo\Categoires.cshtml" />
+    <Content Include="Views\Photo\Categories.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\CategorieViewModel\" />
     <Folder Include="Views\Search\" />
     <Folder Include="Views\UserRepository\" />
   </ItemGroup>

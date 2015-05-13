@@ -6,9 +6,8 @@ using makeup1.Models;
 
 namespace makeup1.ViewModels
 {
-    public class NewsFeedViewModel
+    public class CategorieViewModel
     {
-        public List<Photo> photo { get; set; }
+        public List<Photo> catePhotos { get; set; }
     }
-
 }

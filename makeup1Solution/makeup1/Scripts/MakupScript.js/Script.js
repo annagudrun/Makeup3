@@ -70,7 +70,8 @@ function UploadImage() {
     var data = {
         imageUrl: $("#imageUrl").val(),
         hash: $("#imageHash").val(),
-        caption: $("#imageCaption").val()
+        caption: $("#imageCaption").val(),
+        categorie: $("#imageCategorie").val()
     };
     $.ajax('/Photo/Upload', {
         type: 'Post',
