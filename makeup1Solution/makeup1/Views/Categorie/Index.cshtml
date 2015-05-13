@@ -1,7 +1,16 @@
-﻿
+﻿@model makeup1.ViewModels.CategorieViewModel
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
+<div>
+    @foreach (var photo in Model.catePhotos)
+    {
+        <div class="categorie">
+            <img src="@photo.photoUrl" />
+            <p>@photo.Caption</p>
+        </div>
+    }
+</div>

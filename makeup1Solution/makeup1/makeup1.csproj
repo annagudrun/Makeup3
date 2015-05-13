@@ -236,7 +236,7 @@
     <Content Include="Views\Home\Artist.cshtml" />
     <Content Include="Views\Photo\MyProfile.cshtml" />
     <Content Include="Views\Home\EditProfile.cshtml" />
-    <Content Include="Views\Categorie\Categories.cshtml" />
+    <Content Include="Views\Categorie\CategorieList.cshtml" />
     <Content Include="Views\Categorie\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
