@@ -12,7 +12,6 @@ function SearchForUser(query) {
 }
 
 function SearchForHashtag(hashtag) {
-  //  console.log("Searching for hashtag: " + hashtag);
     $.post("/Search/SearchForHashtag?hashtag=" + hashtag.slice(1, hashtag.length))
         .success(ProcessHashtagResults);
 }
