@@ -193,3 +193,45 @@ visibility:visible;
     width: 50px; 
     height: 50 px;
 }
+
+.follow 
+{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.followText
+{
+    cursor: pointer;
+    padding: 5px;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+.unFollowText {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 25px;
+    color: red;
+    text-decoration: none;
+}
+
+.followText:hover
+{
+    text-decoration: none;
+    color: black;
+}
+
+.unFollowText:hover
+{
+    text-decoration: none;
+    color: black;
+}
+
+.myProfile 
+{
+    width: 50%;
+    margin: auto;
+}

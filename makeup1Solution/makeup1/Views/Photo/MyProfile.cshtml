@@ -1,11 +1,9 @@
 ﻿@model makeup1.ViewModels.UsersAccount
 
-
-<div class="col-lg-12">
-
+<div class="col-lg-12 follow">
     @if (Model.username != null)
     {
-        <div class="col-lg-3" >
+        <div class="cfollow" >
             <div style="display:none;" id="followUsername">@Model.username</div>
             @if (Model.isFollowing)
             {
@@ -37,7 +35,7 @@
 <div>
     @foreach (var photo in Model.photos)
     {  
-        <div class="minsida">
+        <div class="minsida col-md-12">
         <img src="@photo.photoUrl"/>
         </div>
     }
