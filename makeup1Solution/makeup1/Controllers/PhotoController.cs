@@ -85,7 +85,7 @@ namespace makeup1.Controllers
             model.userid = User.Identity.GetUserId();
             bool resp = repo.AddPhoto(model);
 
-            return RedirectToAction("MyProfile", "Photo");
+            return Json(new { success = true });//RedirectToAction("MyProfile", "Photo");
         }
 	}
 }
