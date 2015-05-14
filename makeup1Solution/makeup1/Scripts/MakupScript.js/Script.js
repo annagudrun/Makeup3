@@ -12,7 +12,7 @@ function SearchForUser(query) {
 }
 
 function SearchForHashtag(hashtag) {
-    console.log("Searching for hashtag: " + hashtag);
+  //  console.log("Searching for hashtag: " + hashtag);
     $.post("/Search/SearchForHashtag?hashtag=" + hashtag.slice(1, hashtag.length))
         .success(ProcessHashtagResults);
 }
@@ -39,18 +39,14 @@ function ProcessHashtagResults(listOfPhotos) {
     for (var i = 0; i < listOfPhotos.length; ++i) {
         var currentPhoto = listOfPhotos[i];
 
-        /*var resultElement = $("<a />", {
-            text: currentPhoto.Caption,
-            href: "/Home/Index/" + currentPhoto.ID
-        });*/
-        var resultElement = $("<div />");
+        var resultElement = $("<div/>");
         var resultCaption = $("<p>" + currentPhoto.Caption + "</p>");
         var resultImage = $("<img />", {
             src: currentPhoto.PhotoUrl
         });
-
-        resultElement.append(resultCaption);
+        
         resultElement.append(resultImage);
+        resultElement.append(resultCaption);
 
         $("#searchResults").append(resultElement);
     }
@@ -70,24 +66,6 @@ function Search(query) {
         SearchForUser(query);
     }
 
-    /*
-    $.ajax('/Search/SearchForUser?query=' + query, {
-        type: 'Get',
-        dataType: 'json',
-        error: function (jqXHR, textStatus, errorThrown) {
-            $("#errorMessage").text("Error occured, please contact support");
-        },
-        success: function (data, textStatus, jqXHR) {
-            $("#searchResults").html("");
-            $(data).each(function() {
-                console.log($(this)[0].username);
-                $("<a/>", {
-                    text: $(this)[0].username,
-                    href: "/Photo/FriendsProfile/" + $(this)[0].username
-                }).appendTo("#searchResults");
-            })
-        }
-    });*/
 }
 
 function FollowUser() {
