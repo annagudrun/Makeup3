@@ -20,14 +20,14 @@
     else
     {
         <div>
-            <img src="@Url.Content(Model.user.ProfilePic)" alt="picture"/>
+            <img src="@Url.Content(Model.user.ProfilePic)" alt="picture" class="profilePicture"/>
         </div>
         <div class="uploadContainer">
             <input placeholder="Slóð á mynd" class="input-sm" id="imageUrl"/>
             <input placeholder="Titill" class="input-sm" id="imageCaption" />
             <input placeholder="Hashtag" class="input-sm" id="imageHash"/> 
             <input placeholder="Myndaflokkur" class="input-sm" id="imageCategorie"/>   
-            <input class="button-col" type="submit" class="btn btn-primary" value="Upload" onclick="UploadImage()"/>
+            <input class="btn btn-default" type="submit" value="Bæta við mynd" onclick="UploadImage()"/>
         </div>        
     }
 </div>
