@@ -251,6 +251,27 @@ visibility:visible;
     height: 300px;
 }
 
+.categories
+{
+  cursor: pointer;
+  padding: 15px;
+  font-size: 25px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.categories:hover
+{
+   text-decoration: none;
+   text-decoration-color: black;
+}
+
+h2
+{
+  padding: 15px;
+  font-size: 40px;
+  color: black;
+}
 
 /*.minsida 
 {
