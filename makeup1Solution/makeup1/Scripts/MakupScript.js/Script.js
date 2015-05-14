@@ -6,6 +6,56 @@
     });
 });
 
+function SearchForUser(query) {
+    $.post("/Search/SearchForUser?query=" + query)
+        .success(ProcessUserResults);
+}
+
+function SearchForHashtag(hashtag) {
+    console.log("Searching for hashtag: " + hashtag);
+    $.post("/Search/SearchForHashtag?hashtag=" + hashtag.slice(1, hashtag.length))
+        .success(ProcessHashtagResults);
+}
+
+function ProcessUserResults(listOfUsers) {
+    $("#searchResults").html("");
+
+    for(var i = 0; i < listOfUsers.length; ++i) {
+        var currentUser = listOfUsers[i];
+
+        var resultElement = $("<a />", {
+            text: currentUser.username,
+            href: "/Photo/FriendsProfile/" + currentUser.username
+        });
+
+        $("#searchResults").append(resultElement);
+    }
+}
+
+function ProcessHashtagResults(listOfPhotos) {
+
+    $("#searchResults").html("");
+
+    for (var i = 0; i < listOfPhotos.length; ++i) {
+        var currentPhoto = listOfPhotos[i];
+
+        /*var resultElement = $("<a />", {
+            text: currentPhoto.Caption,
+            href: "/Home/Index/" + currentPhoto.ID
+        });*/
+        var resultElement = $("<div />");
+        var resultCaption = $("<p>" + currentPhoto.Caption + "</p>");
+        var resultImage = $("<img />", {
+            src: currentPhoto.PhotoUrl
+        });
+
+        resultElement.append(resultCaption);
+        resultElement.append(resultImage);
+
+        $("#searchResults").append(resultElement);
+    }
+}
+
 function Search(query) {
 
     if (query.length == 0) {
@@ -13,6 +63,14 @@ function Search(query) {
         return;
     }
 
+    if (query[0] === "#") {
+        SearchForHashtag(query);
+    }
+    else {
+        SearchForUser(query);
+    }
+
+    /*
     $.ajax('/Search/SearchForUser?query=' + query, {
         type: 'Get',
         dataType: 'json',
@@ -29,7 +87,7 @@ function Search(query) {
                 }).appendTo("#searchResults");
             })
         }
-    });
+    });*/
 }
 
 function FollowUser() {
