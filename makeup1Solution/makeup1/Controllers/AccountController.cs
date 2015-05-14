@@ -36,7 +36,7 @@ namespace makeup1.Controllers
             return View();
         }
 
-        //
+
         // POST: /Account/Login
         [HttpPost]
         [AllowAnonymous]
@@ -53,7 +53,7 @@ namespace makeup1.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Invalid username or password.");
+                    ModelState.AddModelError("", "Rangt notendanafn eða lykilorð.");
                 }
             }
 

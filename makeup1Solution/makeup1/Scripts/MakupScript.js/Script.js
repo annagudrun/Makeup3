@@ -124,7 +124,7 @@ function UnFollowUser() {
     });
 }
 
-function UploadImage() {
+$('#uploadImageBtn').on('click', function UploadImage() {
     var data = {
         imageUrl: $("#imageUrl").val(),
         hash: $("#imageHash").val(),
@@ -135,15 +135,11 @@ function UploadImage() {
         type: 'Post',
         dataType: 'json',
         data: data,
-        error: function (jqXHR, textStatus, errorThrown) {
+        error: function (data) {
             $("#errorMessage").text("Error occured, please contact support");
         },
-        success: function (data, textStatus, jqXHR) {
-            if (data) {
-                $(".unFollowText").fadeOut(function () {
-                    $(".followText").fadeIn();
-                })
-            }
+        success: function (data) { 
+            window.location.href = '/Photo/MyProfile';
         }
     });
-}
+})

@@ -26,8 +26,14 @@
             <input placeholder="Slóð á mynd" class="input-sm" id="imageUrl"/>
             <input placeholder="Titill" class="input-sm" id="imageCaption" />
             <input placeholder="Hashtag" class="input-sm" id="imageHash"/> 
-            <input placeholder="Myndaflokkur" class="input-sm" id="imageCategorie"/>   
-            <input class="btn btn-default" type="submit" value="Bæta við mynd" onclick="UploadImage()"/>
+            <select class="input-sm" id="imageCategorie">
+                <option value="-Enginn flokkur-">-- Veldu flokk --</option>
+                <option value="Kvöldförðun">Kvöldförðun</option>
+                <option value="Dagsförðun">Dagsförðun</option>
+                <option value="Snyrtivörur">Snyrtivörur</option>
+                <option value="Förðun eftir mig">Förðun eftir mig</option>
+            </select>
+            <input class="btn btn-default" type="submit" value="Bæta við mynd" id="uploadImageBtn"/>
         </div>        
     }
 </div>
