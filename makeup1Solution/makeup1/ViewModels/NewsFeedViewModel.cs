@@ -8,7 +8,7 @@ namespace makeup1.ViewModels
 {
     public class NewsFeedViewModel
     {
-        public List<Photo> photo { get; set; }
+        public List<Photo> NewsFeedPhotos { get; set; }
     }
 
 }

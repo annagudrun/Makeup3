@@ -8,6 +8,6 @@ namespace makeup1.ViewModels
 {
     public class CategorieViewModel
     {
-        public List<Photo> catePhotos { get; set; }
+        public List<Photo> CategoriePhotos { get; set; }
     }
 }

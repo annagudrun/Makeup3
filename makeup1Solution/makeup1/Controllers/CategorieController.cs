@@ -35,7 +35,7 @@ namespace makeup1.Controllers
         {
             PhotoRepository photoRep = new PhotoRepository();
             CategorieViewModel model = new CategorieViewModel();
-            model.catePhotos = photoRep.GetPhotoByCategorie(categorie);
+            model.CategoriePhotos = photoRep.GetPhotoByCategorie(categorie);
             return View(model);
         }
 

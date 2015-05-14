@@ -18,7 +18,7 @@ namespace makeup1.Controllers
             string user = User.Identity.GetUserName();
 
             NewsFeedViewModel model = new NewsFeedViewModel();
-            model.photo = repo.GetFollowersPhotos(user);
+            model.NewsFeedPhotos = repo.GetFollowersPhotos(user);
             return View(model);
         }
 
