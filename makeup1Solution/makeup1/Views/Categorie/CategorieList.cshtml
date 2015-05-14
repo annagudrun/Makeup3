@@ -5,17 +5,17 @@
 
 <h2>Valinn flokkur</h2>
 
-<div>
+<div class="col-md-12">
     @foreach (var photo in Model.catePhotos)
-    {
-        
-        <div class="categorie">
-            <img src="@photo.photoUrl" />
-            <p class="textCaption">@photo.Caption</p>
-            @foreach (var h in photo.Hashtags)
-            {
-                <span>#@h.HastagName</span>
-            } 
-        </div>
-    }
+{
+
+    <div class="categoryImg col-md-4">
+        <img src="@photo.photoUrl" />
+        <p class="textCaption">@photo.Caption</p>
+        @foreach (var h in photo.Hashtags)
+        {
+            <span>#@h.HastagName</span>
+        }
+    </div>
+}
 </div>

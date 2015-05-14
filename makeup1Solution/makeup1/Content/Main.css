@@ -235,3 +235,34 @@ visibility:visible;
     width: 50%;
     margin: auto;
 }
+
+.profilePicture
+{
+    width: 100%;
+    max-height: 250px;
+    max-width: 300px;
+    min-height: 200px;
+    min-width: 100px;
+}
+
+.categoryImg > img
+{
+    width: 300px;
+    height: 300px;
+}
+
+
+/*.minsida 
+{
+    width: 100%;
+    display: block;
+    height: auto;
+    margin-left: 10%;
+}
+.minsida > img
+{
+    float:left;
+    width: 300px;
+    height: 300px;
+    margin: 5px 5px;
+}*/
