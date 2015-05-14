@@ -8,7 +8,7 @@ namespace makeup1.ViewModels
 {
     public class UserViewModel
     {
-        public string  username { get; set; }
+        public string username { get; set; }
         public string profilePhoto { get; set; }
         public UserViewModel()
         {

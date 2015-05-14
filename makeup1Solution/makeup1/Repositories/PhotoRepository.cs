@@ -108,5 +108,19 @@ namespace makeup1.Repositories
                 return false;
             }
         }
+
+        public IEnumerable<Photo> GetPhotosByHashtag(string tag)
+        {
+            IEnumerable<int> photoIds = (from hashtag in db.Hashtags
+                                         where hashtag.HastagName == tag
+                                          select hashtag.HashtagPhotoId).ToList();
+
+        
+            IEnumerable<Photo> photos = (from photo in db.Photos
+                                         where photoIds.Contains(photo.ID)
+                                         select photo).ToList();
+
+            return photos;
+        }
     }
 }
