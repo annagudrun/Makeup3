@@ -20,6 +20,7 @@ namespace makeup1.Controllers
        {
            return RedirectToAction("CategorieList", new { categorie = "Dagsförðun" });
        }
+
        public ActionResult MakeupProduct()
        {
            return RedirectToAction("CategorieList", new { categorie = "Snyrtivörur" });
